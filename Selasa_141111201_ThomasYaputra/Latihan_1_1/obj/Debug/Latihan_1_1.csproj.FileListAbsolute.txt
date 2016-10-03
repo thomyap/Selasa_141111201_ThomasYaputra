@@ -1,1 +1,9 @@
 C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\bin\Debug\Latihan_1_1.exe
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\bin\Debug\Latihan_1_1.pdb
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.csprojResolveAssemblyReference.cache
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.Form1.resources
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.Properties.Resources.resources
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.csproj.GenerateResource.Cache
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+C:\Users\Thomas Yap\OneDrive\Mikroskil Sem 5\Framework .Net Lanjutan\Tugas Git\Selasa_141111201_ThomasYaputra\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
