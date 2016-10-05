@@ -17,10 +17,36 @@ namespace Latihan_1_1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            label1.Text = vScrollBar1.Value.ToString();
-            label2.Text = vScrollBar2.Value.ToString();
+            DateTime min = new DateTime(DateTime.Now.Year, 1, 1);
+            DateTime max = new DateTime(DateTime.Now.Year, 12, 31);
+            if(vScrollBar2.Value > vScrollBar1.Value)
+            {
+                vScrollBar2.Value = vScrollBar1.Value;
+            }
+            min = min.AddYears(vScrollBar2.Value - vScrollBar2.Maximum);
+            max = max.AddYears(vScrollBar1.Value - vScrollBar1.Maximum);
+            dateTimePicker1.MinDate = min;
+            dateTimePicker1.MaxDate = max;
+            label6.Text = vScrollBar1.Value.ToString();
+            label7.Text = vScrollBar2.Value.ToString();
+        }
+
+        private void vScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            DateTime min = new DateTime(DateTime.Now.Year, 1, 1);
+            DateTime max = new DateTime(DateTime.Now.Year, 12, 31);
+            if (vScrollBar2.Value > vScrollBar1.Value)
+            {
+                vScrollBar1.Value = vScrollBar2.Value;
+            }
+            min = min.AddYears(vScrollBar2.Value - vScrollBar2.Maximum);
+            max = max.AddYears(vScrollBar1.Value - vScrollBar1.Maximum);
+            dateTimePicker1.MaxDate = max;
+            dateTimePicker1.MinDate = min;
+            label6.Text = vScrollBar1.Value.ToString();
+            label7.Text = vScrollBar2.Value.ToString();
         }
     }
 }
