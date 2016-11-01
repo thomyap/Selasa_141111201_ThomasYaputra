@@ -63,7 +63,7 @@
             this.tsBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBold.Name = "tsBold";
             this.tsBold.Size = new System.Drawing.Size(23, 24);
-            this.tsBold.Text = "toolStripButton1";
+            this.tsBold.Text = "Bold";
             this.tsBold.Click += new System.EventHandler(this.tsBold_Click);
             // 
             // tsItalic
@@ -73,7 +73,7 @@
             this.tsItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsItalic.Name = "tsItalic";
             this.tsItalic.Size = new System.Drawing.Size(23, 24);
-            this.tsItalic.Text = "toolStripButton2";
+            this.tsItalic.Text = "Italic";
             this.tsItalic.Click += new System.EventHandler(this.tsItalic_Click);
             // 
             // tsUnderline
@@ -83,7 +83,7 @@
             this.tsUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsUnderline.Name = "tsUnderline";
             this.tsUnderline.Size = new System.Drawing.Size(23, 24);
-            this.tsUnderline.Text = "toolStripButton3";
+            this.tsUnderline.Text = "Underline";
             this.tsUnderline.Click += new System.EventHandler(this.tsUnderline_Click);
             // 
             // tsFontSize
