@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Latihan_5_1.Properties
+namespace Latihan_4_1.Properties
 {
 
 
