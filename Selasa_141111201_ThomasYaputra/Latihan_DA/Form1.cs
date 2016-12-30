@@ -72,7 +72,7 @@ namespace Latihan_DA
 
 
             // UPDATE
-            string customerUpdateSql = String.Concat("UPDATE customer SET name = @name, address = @address, zip_code = @zip_code, phone_number = @phone_number, email = @email WHERE id = @id");
+            string customerUpdateSql = String.Concat("UPDATE customer SET name = @name, address = @address, zip_code = @zip_code, phone_number = @phone_number, email = @email, updated_at = @updated_at WHERE id = @id");
             MySqlCommand customerUpdateCommand = new MySqlCommand(customerUpdateSql, conn);
             customerUpdateCommand.Parameters.AddWithValue("@id", txId.Text);
             customerUpdateCommand.Parameters.AddWithValue("@name", txName.Text);
@@ -80,6 +80,7 @@ namespace Latihan_DA
             customerUpdateCommand.Parameters.AddWithValue("@zip_code", txZipCode.Text);
             customerUpdateCommand.Parameters.AddWithValue("@phone_number", txPhoneNumber.Text);
             customerUpdateCommand.Parameters.AddWithValue("@email", txEmail.Text);
+            customerUpdateCommand.Parameters.AddWithValue("@updated_at", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
             customerDA.UpdateCommand = customerUpdateCommand;
 
             // delete
@@ -95,6 +96,7 @@ namespace Latihan_DA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // INSERT
             initializeDA();
             string pesan = "";
             if (txId.Text == "")
@@ -102,10 +104,6 @@ namespace Latihan_DA
                 pesan = String.Concat(customerDA.InsertCommand.ExecuteNonQuery(), " Record succesfully saved.");
 
                 // MessageBox.Show(pesan);
-            }
-            else
-            {
-                pesan = String.Concat(customerDA.UpdateCommand.ExecuteNonQuery(), " Record succesfully updated.");
             }
             MessageBox.Show(pesan, "Save Information");
             customerDA.SelectCommand.ExecuteScalar();
@@ -115,7 +113,17 @@ namespace Latihan_DA
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // UPDATE
+            initializeDA();
+            string pesan = "";
+            if (txId.Text != "")
+            {
+                pesan = String.Concat(customerDA.UpdateCommand.ExecuteNonQuery(), " Record succesfully updated.");
+            }
+            MessageBox.Show(pesan, "Save Information");
+            customerDA.SelectCommand.ExecuteScalar();
+            dt.Clear();
+            customerDA.Fill(dt);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -139,6 +147,28 @@ namespace Latihan_DA
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dgvDaftar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txId.Text = dgvDaftar.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txName.Text = dgvDaftar.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txAddress.Text = dgvDaftar.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txZipCode.Text = dgvDaftar.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txPhoneNumber.Text = dgvDaftar.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txEmail.Text = dgvDaftar.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            foreach(Control i in Controls)
+            {
+                if(i is TextBox)
+                {
+                    (i as TextBox).Clear();
+                    txName.Focus();
+                }
+            }
         }
     }
 }

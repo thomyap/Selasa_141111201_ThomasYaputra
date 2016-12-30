@@ -45,12 +45,13 @@
             this.txAddress = new System.Windows.Forms.TextBox();
             this.txName = new System.Windows.Forms.TextBox();
             this.txId = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaftar)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(413, 149);
+            this.button4.Location = new System.Drawing.Point(413, 167);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 34);
             this.button4.TabIndex = 33;
@@ -60,7 +61,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(413, 103);
+            this.button3.Location = new System.Drawing.Point(413, 92);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 34);
             this.button3.TabIndex = 32;
@@ -70,11 +71,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(413, 56);
+            this.button2.Location = new System.Drawing.Point(413, 52);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 34);
             this.button2.TabIndex = 31;
-            this.button2.Text = "Reset";
+            this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -95,6 +96,7 @@
             this.dgvDaftar.Name = "dgvDaftar";
             this.dgvDaftar.Size = new System.Drawing.Size(496, 219);
             this.dgvDaftar.TabIndex = 29;
+            this.dgvDaftar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDaftar_CellClick);
             // 
             // label6
             // 
@@ -194,11 +196,22 @@
             this.txId.Size = new System.Drawing.Size(100, 20);
             this.txId.TabIndex = 17;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(413, 129);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(95, 34);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Reset";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 437);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -244,6 +257,7 @@
         private System.Windows.Forms.TextBox txAddress;
         private System.Windows.Forms.TextBox txName;
         private System.Windows.Forms.TextBox txId;
+        private System.Windows.Forms.Button button5;
     }
 }
 
