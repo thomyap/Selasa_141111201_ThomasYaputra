@@ -76,6 +76,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -217,6 +218,7 @@
             this.Controls.Add(this.txId);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaftar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

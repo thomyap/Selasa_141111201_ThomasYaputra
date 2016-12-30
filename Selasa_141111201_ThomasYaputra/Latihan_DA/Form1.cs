@@ -113,7 +113,7 @@ namespace Latihan_DA
             customerDA.Fill(dt);
         }
 
-        private void resetForm_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
